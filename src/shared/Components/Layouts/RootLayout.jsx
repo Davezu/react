@@ -1,10 +1,16 @@
 import Header from "../Partials/Header"
 import Footer from "../Partials/Footer"
-const RootLayout = ({ children }) => {
+import {Link, Outlet} from "react-router-dom";
+const RootLayout = ({  }) => {
   return (
-    <div className='App'>
+    <div className='root-main'>
+      <Link to="/"> Home</Link>
+      <Link to="/About"> About</Link>
+      <Link to="/Cars"> Cars</Link>
+      <Link to="/CarsPage"> CarPage</Link>
+
       <Header />
-      {children}
+      <Outlet />
       <Footer />
     </div>
   )
