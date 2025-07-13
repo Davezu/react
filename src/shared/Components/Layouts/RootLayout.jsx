@@ -10,7 +10,7 @@ const RootLayout = ({  }) => {
       <Link to="/CarsPage"> CarPage</Link>
 
       <Header />
-      <Outlet />
+      <Outlet context={{test: `Test 1`}} />
       <Footer />
     </div>
   )
