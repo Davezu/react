@@ -1,10 +1,11 @@
 import { useOutletContext } from "react-router-dom"
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Home = () => {
   const {test} = useOutletContext();
   const [count, setCount] = useState(0);
   const [count2, setCount2]= useState(0);
+  const countRef = useRef(0)
 
   const increment = () => setCount(count + 1);
   const increment2 = () => setCount2(count2 + 1);
@@ -21,7 +22,7 @@ const Home = () => {
       <div>
         Count: {count}
         Count2: {count2}
-        <button onClick={increment}>Click me</button>
+        <button ref={countRef} onClick={increment}>Click me</button>
         <button onClick={increment2}>Click me2</button>
       </div>
       
