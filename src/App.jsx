@@ -5,7 +5,7 @@ import About from "./pages/About";
 import CarsPage from "./pages/Cars";
 import CarPage from "./pages/Car";
 import NotFound from "./pages/NotFound";
-
+import AboutHeader from "./components/aboutHeader";
 const App = () => {
   return (
       <Routes>
@@ -15,6 +15,7 @@ const App = () => {
           <Route path="/Cars" element={<CarsPage/>} />
           <Route path="/CarsPage" element={<CarPage/>} />
           <Route path="/Cars/:id" element={<CarPage/>} />
+          <Route path="/AboutHeader" element={<AboutHeader/>} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

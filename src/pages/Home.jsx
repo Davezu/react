@@ -14,7 +14,9 @@ const Home = () => {
     const timer = setTimeout(() => {
       console.log(`run once ${count}`);
     }, 2000)
+    
     return () => clearTimeout(timer);
+
   },[count])
   return (
     <div>
